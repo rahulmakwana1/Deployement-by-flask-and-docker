@@ -54,3 +54,7 @@ as we can see that I copied all the required files such as templates folder in w
  here we write 8000 port so our website will run on localhost 8000.)
       
 # OUTPUT
+## initial output
+![](images/1.jpg)
+## after adding values
+![](images/2.jpg)
