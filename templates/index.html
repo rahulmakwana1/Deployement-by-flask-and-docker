@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>carnival wars</title>
+</head>
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1><div style="text-align:center">predict selling price</div></h1>
+
+            <input type="text" name="Stall_no" placeholder="Stall_no" required="required">Stall_no/>
+            <input type="text" name="Market_Category" placeholder="Market_Category" required="required"/>
+            <input type="text" name="Loyalty_customer" placeholder="Loyalty_customer" required="required"/>
+            <input type="text" name="Product_Category" placeholder="Product_Category" required="required"/>
+            <input type="text" name="Grade" placeholder="Grade" required="required"/>
+            <input type="text" name="Demand" placeholder="Demand" required="required"/>
+            <input type="text" name="Discount_avail" placeholder="Discount_avail" required="required"/>
+            <input type="text" name="charges_1" placeholder="charges_1" required="required"/>
+            <input type="text" name="charges_2" placeholder="charges_2" required="required"/>
+            <input type="text" name="Maximum_price" placeholder="Maximum_price" required="required"/>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">predict</button>
+
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+</body>
+</html>

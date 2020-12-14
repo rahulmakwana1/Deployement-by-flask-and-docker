@@ -1,0 +1,111 @@
+<!--here i am going to apply some other functions and making it more clear.
+previously i have just created only boxes and now i am also going to make a label for each attribute-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <title>carnival wars</title>
+</head>
+<body>
+    <h1><div style="text-align:center">selling price of the product in the carnival</div></h1>
+    <div class="container" style="color:blue">
+        <div class="row">
+            <div class="col-10">
+                <form action="{{ url_for('predict')}}" method="post">
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Stall_no"><p class="font-weight-bold">Stall_no</p></label>
+                        <input type="text" name="Stall_no" placeholder="Stall_no" required="required"/>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Market_Category"><p class="font-weight-bold">Market_Category</p></label>
+                        <input type="text" name="Market_Category" placeholder="Market_Category" required="required"/>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Loyalty_customer"><p class="font-weight-bold">Loyalty_customer</p></label>
+                        <select type="text" name="Loyalty_customer" placeholder="Loyalty_customer" required="required"/>
+                            <option value="1">YES</option>
+                            <option value="0">NO</option>
+3
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Product_Category"><p class="font-weight-bold">Product_Category</p></label>
+                        <select type="text" name="Product_Category" placeholder="Product_Category" required="required"/>
+                            <option value="0">Child Care</option>
+                            <option value="1">Cosmetics</option>
+                            <option value="2">Educational</option>
+                            <option value="3">Fashion</option>
+                            <option value="4">Home decor</option>
+                            <option value="5">Hospitality</option>
+                            <option value="6">Organic</option>
+                            <option value="7">Petcare</option>
+                            <option value="8">Repair</option>
+                            <option value="9">Technology</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Grade"><p class="font-weight-bold">Grade</p></label>
+                        <input type="text" name="Grade" placeholder="Grade" required="required"/>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Demand"><p class="font-weight-bold">Demand</p></label>
+                        <input type="text" name="Demand" placeholder="Demand" required="required"/>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Discount_avail"><p class="font-weight-bold">Discount_avail</p></label>
+                        <select type="text" name="Discount_avail" placeholder="Discount_avail" required="required"/>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="charges_1"><p class="font-weight-bold">charges_1</p></label>
+                        <input type="text" name="charges_1" placeholder="charges_1" required="required"/>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="charges_2"><p class="font-weight-bold">charges_2</p></label>
+                        <input type="text" name="charges_2" placeholder="charges_2" required="required"/>
+                    </div>
+
+                    <div class="form-group" style="text-align:center">
+                        <label for="Maximum_price"><p class="font-weight-bold">Maximum_price</p></label>
+                        <input type="text" name="Maximum_price" placeholder="Maximum_price" required="required"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">predict</button>
+                </form>
+                <h2><div style="text-align:center"> {{ prediction_text }}</div></h2>
+        </div>
+        </div>
+        </div>
+
+
+    </div>
+<style>
+        body {
+            background-color: powderblue;
+            text-align: center;
+            padding: 0px;
+        }
+
+</style>
+</body>
+</html>
